@@ -1,9 +1,10 @@
 # ProjektBD
 
-** BAZY DANYCH **
-** PROJEKT **
+**BAZY DANYCH**
 
-** Temat: Baza danych obsługi oceniania w szkole (dziennik elektroniczny). **
+**PROJEKT**
+
+**Temat: Baza danych obsługi oceniania w szkole (dziennik elektroniczny).**
 
 #### 1. Cel projektu
 Zapewnienie zaplecza bazodanowego oraz dostarczenie aplikacji ułtawiającej prowadzenie zajęć lekcyjnych w szkołach podstawowych oraz ponadpodstawowych.
