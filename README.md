@@ -21,8 +21,8 @@ Aplikacja będzie pozwalała na manipulację na wyżej wspomnianych danych.
 W projekcie będą używane następujące techonologie:
    - Maszyna wirtualna z systemem Debian 11
    - Repozytorium zawierające całość projektu
-   - Projekt oparty na obrazie docker-owym.
-   - Serwer bazy danych: MariaDB server
-   - Klient bazy danych CLI: MariaDB client
+   - Projekt oparty na serwisie 'docker-compose'
+   - Serwer bazy danych: MariaDB server 10.5
+   - Klient bazy danych CLI: MariaDB client 10.5
    - Klient bazy danych GUI: MySQL Workbench
 
