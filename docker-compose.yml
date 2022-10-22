@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  projekt:
+    image: mariadb:10.9-jammy
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'projekt'
+      MYSQL_USER: 'projekt'
+      MYSQL_PASSWORD: 'projekt'
+      MYSQL_ROOT_PASSWORD: 'projekt'
+    ports:
+      - '13306:3306'
+    volumes:
+      - ${PWD}/mariadb:/var/lib/mysql
+
