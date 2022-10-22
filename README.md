@@ -15,6 +15,7 @@ Zapewnienie zaplecza bazodanowego oraz dostarczenie aplikacji ułtawiającej pro
   - O przedmiotach
   - O ocenach uczniów
   - O lekacjch
+
 Aplikacja będzie pozwalała na manipulację na wyżej wspomnianych danych.
 
 #### 2. Użyte technologie
