@@ -1,4 +1,4 @@
-# ProjektBD
+# DatabaseProject
 
 **BAZY DANYCH**
 
