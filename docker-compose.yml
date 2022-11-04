@@ -1,14 +1,14 @@
 version: '3'
 
 services:
-  projekt:
+  database_project:
     image: mariadb:10.9-jammy
     restart: always
     environment:
-      MYSQL_DATABASE: 'projekt'
-      MYSQL_USER: 'projekt'
-      MYSQL_PASSWORD: 'projekt'
-      MYSQL_ROOT_PASSWORD: 'projekt'
+      MYSQL_ROOT_PASSWORD: asdf
+      MYSQL_DATABASE: dziennik
+      MYSQL_USER: user
+      MYSQL_PASSWORD: asdf
     ports:
       - '13306:3306'
     volumes:
