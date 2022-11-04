@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: asdf
-      MYSQL_DATABASE: dziennik
+      MYSQL_DATABASE: gradebook
       MYSQL_USER: user
       MYSQL_PASSWORD: asdf
     ports:
