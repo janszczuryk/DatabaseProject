@@ -25,5 +25,5 @@ W projekcie będą używane następujące techonologie:
    - Projekt oparty na serwisie 'docker-compose'
    - Serwer bazy danych: MariaDB server 10
    - Klient bazy danych CLI: MariaDB client 10
-   - Klient bazy danych GUI: MySQL Workbench
+   - Klient bazy danych GUI: DBeaver 22
 
