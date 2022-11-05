@@ -36,6 +36,8 @@ TABLES:
 - subjects
 	id 				int(11)			PRIMARY KEY NOT NULL AUTO_INCREMENT
 	name 				varchar(255)		NOT NULL
+	valid_date_from			datetime		NOT NULL
+	valid_date_to			datetime		NOT NULL
 	created_at			datetime		NOT NULL
 	updated_at			datetime		NOT NULL
 	
