@@ -1,9 +1,10 @@
 version: '3'
 
 services:
-  database_project:
-    image: mariadb:10.9-jammy
+  mariadb:
     restart: always
+    container_name: mariadb-container
+    image: mariadb:10.9-jammy
     environment:
       MYSQL_ROOT_PASSWORD: asdf
       MYSQL_DATABASE: gradebook
