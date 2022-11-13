@@ -1,10 +1,13 @@
 # DatabaseProject
 
+### Description
+Tell about what it is.
+
 ### Prerequisites
-TODO
+Tell about envrionment requirements, os, docker, etc.
 
 ### Deployment
-TODO
+Tell how to deploy - commands etc.
 
 ### Usage
-TODO
+Tell how to connect to database, show some database views, run app, etc.
