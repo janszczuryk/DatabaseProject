@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
   dbp-mariadb:
@@ -13,5 +13,14 @@ services:
     ports:
       - '${HOST_PORT}:3306'
     volumes:
-      - ${PWD}/sql:/sql
+      - type: volume
+        source: mariadb-data
+        target: /var/lib/mysql
+        volume:
+          nocopy: true
+      - type: bind
+        source: ${PWD}/sql
+        target: /sql
 
+volumes:
+  mariadb-data:
