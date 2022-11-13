@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  mariadb:
+  dbp-mariadb:
     restart: always
-    container_name: mariadb-container
+    container_name: dbp-mariadb-container
     image: mariadb:10.9-jammy
     environment:
       MYSQL_ROOT_PASSWORD: asdf
