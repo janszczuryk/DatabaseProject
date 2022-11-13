@@ -1,0 +1,81 @@
+
+Table "classes" {
+  "id" int(11) [pk, not null, increment]
+  "name" varchar(255) [not null]
+  "school_type" varchar(255) [not null]
+  "class_teacher_id" int(11) [not null]
+  "created_at" datetime [not null]
+  "updated_at" datetime [not null]
+}
+
+Table "teachers" {
+  "id" int(11) [pk, not null, increment]
+  "name" varchar(255) [not null]
+  "lastname" varchar(255) [not null]
+  "title" varchar(255)
+  "email" varchar(255) [unique, not null]
+  "password" varchar(255) [not null]
+  "phone" varchar(63)
+  "pesel" varchar(13) [unique, not null]
+  "created_at" datetime [not null]
+  "updated_at" datetime [not null]
+}
+
+Table "learners" {
+  "id" int(11) [pk, not null, increment]
+  "name" varchar(255) [not null]
+  "lastname" varchar(255) [not null]
+  "email" varchar(255) [unique, not null]
+  "password" varchar(255) [not null]
+  "pesel" varchar(13) [unique, not null]
+  "class_id" int(11)
+  "created_at" datetime [not null]
+  "updated_at" datetime [not null]
+}
+
+Table "subjects" {
+  "id" int(11) [pk, not null, increment]
+  "name" varchar(255) [not null]
+  "valid_date_from" datetime [not null]
+  "valid_date_to" datetime [not null]
+  "created_at" datetime [not null]
+  "updated_at" datetime [not null]
+}
+
+Table "timetable" {
+  "id" int(11) [pk, not null, increment]
+  "start_time" datetime [not null]
+  "length_minutes" int(11) [not null]
+  "subject_id" int(11) [not null]
+  "class_id" int(11) [not null]
+  "teacher_id" int(11) [not null]
+  "created_at" datetime [not null]
+  "updated_at" datetime [not null]
+}
+
+Table "marks" {
+  "id" int(11) [pk, not null, increment]
+  "value" decimal(2,2) [not null]
+  "weight" decimal(3,2) [not null]
+  "subject_id" int(11) [not null]
+  "teacher_id" int(11) [not null]
+  "learner_id" int(11) [not null]
+  "created_at" datetime [not null]
+  "updated_at" datetime [not null]
+}
+
+Ref:"teachers"."id" < "classes"."class_teacher_id"
+
+Ref:"classes"."id" < "learners"."class_id"
+
+Ref:"subjects"."id" < "timetable"."subject_id"
+
+Ref:"classes"."id" < "timetable"."class_id"
+
+Ref:"teachers"."id" < "timetable"."teacher_id"
+
+Ref:"learners"."id" < "marks"."learner_id"
+
+Ref:"teachers"."id" < "marks"."teacher_id"
+
+Ref:"subjects"."id" < "marks"."subject_id"
