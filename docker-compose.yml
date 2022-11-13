@@ -13,6 +13,5 @@ services:
     ports:
       - '${HOST_PORT}:3306'
     volumes:
-      - ${PWD}/mariadb:/var/lib/mysql
       - ${PWD}/sql:/sql
 

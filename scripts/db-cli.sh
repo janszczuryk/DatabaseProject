@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "Connect to database via CLI ..."
 
-docker exec -it dbp-mariadb-container mysql -u root -pasdf -D gradebook
+source ../.env
+docker exec -it dbp-mariadb-container mysql -u"root" -p"$MYSQL_ROOT_PASSWORD" -D "$MYSQL_DATABASE"
