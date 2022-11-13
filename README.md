@@ -1,29 +1,13 @@
 # DatabaseProject
 
-**BAZY DANYCH**
+### Description
+Tell about what it is.
 
-**PROJEKT**
+### Prerequisites
+Tell about envrionment requirements, os, docker, etc.
 
-**Temat: Baza danych obsługi oceniania w szkole (dziennik elektroniczny).**
+### Deployment
+Tell how to deploy - commands etc.
 
-#### 1. Cel projektu
-Zapewnienie zaplecza bazodanowego oraz dostarczenie aplikacji ułtawiającej prowadzenie zajęć lekcyjnych w szkołach podstawowych oraz ponadpodstawowych.
- Baza danych będzie przechowywała następujące dane:
-  - O klasach
-  - O uczniach
-  - O nauczycielach
-  - O przedmiotach
-  - O ocenach uczniów
-  - O lekacjch
-
-Aplikacja będzie pozwalała na manipulację na wyżej wspomnianych danych.
-
-#### 2. Użyte technologie
-W projekcie będą używane następujące techonologie:
-   - Maszyna wirtualna z systemem Debian 11
-   - Repozytorium zawierające całość projektu
-   - Projekt oparty na serwisie 'docker-compose'
-   - Serwer bazy danych: MariaDB server 10
-   - Klient bazy danych CLI: MariaDB client 10
-   - Klient bazy danych GUI: DBeaver 22
-
+### Usage
+Tell how to connect to database, show some database views, run app, etc.

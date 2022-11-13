@@ -1,16 +1,26 @@
-version: '3'
+version: '3.2'
 
 services:
-  database_project:
-    image: mariadb:10.9-jammy
+  dbp-mariadb:
     restart: always
+    container_name: dbp-mariadb-container
+    image: mariadb:10.9-jammy
     environment:
-      MYSQL_ROOT_PASSWORD: asdf
-      MYSQL_DATABASE: gradebook
-      MYSQL_USER: user
-      MYSQL_PASSWORD: asdf
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 
+      MYSQL_DATABASE: ${MYSQL_DATABASE} 
+      MYSQL_USER: ${MYSQL_USER} 
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD} 
     ports:
-      - '13306:3306'
+      - '${HOST_PORT}:3306'
     volumes:
-      - ${PWD}/mariadb:/var/lib/mysql
+      - type: volume
+        source: mariadb-data
+        target: /var/lib/mysql
+        volume:
+          nocopy: true
+      - type: bind
+        source: ${PWD}/sql
+        target: /sql
 
+volumes:
+  mariadb-data:
