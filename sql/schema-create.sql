@@ -54,8 +54,8 @@ CREATE TABLE `timetable` (
 
 CREATE TABLE `marks` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `value` decimal(2,2) NOT NULL,
-  `weight` decimal(3,2) NOT NULL,
+  `value` decimal(3,2) NOT NULL,
+  `weight` decimal(4,2) NOT NULL,
   `subject_id` int(11) NOT NULL,
   `teacher_id` int(11) NOT NULL,
   `learner_id` int(11) NOT NULL,
