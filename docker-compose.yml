@@ -11,7 +11,7 @@ services:
       MYSQL_USER: ${MYSQL_USER} 
       MYSQL_PASSWORD: ${MYSQL_PASSWORD} 
     ports:
-      - '${HOST_PORT}:3306'
+      - '${HOST_DB_PORT}:3306'
     volumes:
       - type: volume
         source: mariadb-data
@@ -21,6 +21,21 @@ services:
       - type: bind
         source: ${PWD}/sql
         target: /sql
+  dbp-app:
+    restart: always
+    container_name: dbp-app-container
+    image: docker.io/bitnami/laravel:9
+    ports:
+      - '${HOST_APP_PORT}:8000'
+    environment:
+      - DB_HOST=dbp-mariadb
+      - DB_PORT=3306
+      - DB_USERNAME=${MYSQL_USER}
+      - DB_DATABASE=${MYSQL_DATABASE}
+    volumes:
+      - type: bind
+        source: ${PWD}/app
+        target: /app
 
 volumes:
   mariadb-data:

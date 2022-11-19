@@ -1,2 +1,4 @@
 .env
 sql/dump*.sql
+app/vendor
+app/storage/logs
