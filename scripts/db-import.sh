@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 DIR=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
@@ -13,7 +12,8 @@ fi
 
 echo "Importing to database ($DATABASE)..."
 
-docker exec -i dbp-mariadb-container mysql -u"root" -p"$MYSQL_ROOT_PASSWORD" -D "$DATABASE" < "$DUMP_PATH" \
-&& echo "Imported file: $DUMP_PATH" \
-|| echo "Failed to import file: $DUMP_PATH"
+docker exec -i dbp-mariadb-container \
+	mysql -u"root" -p"$MYSQL_ROOT_PASSWORD" -D "$DATABASE" < "$DUMP_PATH" \
+	&& echo "Imported file: $DUMP_PATH" \
+	|| echo "Failed to import file: $DUMP_PATH"
 
