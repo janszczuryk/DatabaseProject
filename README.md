@@ -16,8 +16,11 @@ cd DatabaseProject/
 cp .env.example .env
 cp app/.env.example app/.env
 ```
+
 Please edit `.env` - to fulfill docker settings.
 Also edit `app/.env` - set database credentails to correspond with previous `.env` file.
+
+Then start up the services:
 ```bash
 docker compose up -d
 ```
