@@ -35,6 +35,17 @@ You can use scripts inside `scripts` directory for convenience.
 | `db-schema.sh` | Create database schema (uses database from `.env` file)
 | `db-seed.sh` | Seeds chosen database with fake data |
 
+If you need access to the containers:
+| Container | Short description |
+| ---: | :--- |
+| `dbp-mariadb-container` | Database container - has got own volume for data |
+| `dbp-app-container` | App container - currently running Laravel app |
+
+Get into the container:
+```bash
+docker exec -it dbp-mariadb-container bash
+```
+
 NOTE: App exposes port set in your `.env` file.
 There is room for improvment by creating GUI for it.
 
