@@ -9,7 +9,6 @@ Before you start, make sure your OS has got docker compose utility (podman compo
 I don't recommend to start any kind of containers on Windows, because Windows is slow.
 
 ### Deployment
-Tell how to deploy - commands etc.
 ```bash
 git clone https://github.com/janszczuryk/DatabaseProject.git
 cd DatabaseProject/
@@ -18,6 +17,7 @@ cp app/.env.example app/.env
 ```
 
 Please edit `.env` - to fulfill docker settings.
+
 Also edit `app/.env` - set database credentails to correspond with previous `.env` file.
 
 Then start up the services:
